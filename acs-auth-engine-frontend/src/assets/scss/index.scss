@@ -1,0 +1,10 @@
+// luminor-components setup
+
+$font-path: "~luminor-components/assets/fonts/";
+
+@import "~luminor-components/lib/Applications/Web/scss/index";
+@import "~luminor-components/lib/Applications/3dsecure/scss/index";
+
+body, html {
+    background-color: #FFFFFF;
+}

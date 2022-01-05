@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:RTCUNGCallResponse xmlns:ns2="http://util.rtcu.cards.bank.lv/">
+            <return>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+                &lt;done&gt;
+                &lt;card-info-acs&gt;
+                &lt;person-code-card-holder&gt;12345678901&lt;/person-code-card-holder&gt;
+                &lt;country&gt;LT&lt;/country&gt;
+                &lt;/card-info-acs&gt;
+            &lt;/done&gt;</return>
+        </ns2:RTCUNGCallResponse>
+    </S:Body>
+</S:Envelope>

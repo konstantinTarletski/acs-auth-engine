@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+       <ns2:smartIdAuthInitResponse xmlns:ns2='http://rid.ays.lv/'>
+<!-- optional -->
+  <return>
+<!-- optional -->
+    <hash>1245</hash>
+<!-- optional -->
+    <status>OK</status>
+  </return>
+</ns2:smartIdAuthInitResponse>
+    </S:Body>
+</S:Envelope>

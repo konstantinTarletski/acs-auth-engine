@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Luminor</title>
+        <link rel="shortcut icon" type="image/ico" th:href="${baseUrl + '/content/favicon.ico'}">
+		<link th:href="${baseUrl + '/content/styles/application.css'}" rel="stylesheet">
+	</head>
+    <body class="prod">
+        <div id="root">
+            <div class="frame-main">
+                <div th:style="${'background-image: url(' + baseUrl + '/content/images/bg.svg)'}" class="bg"></div>
+				<div class="header-main">
+					<div class="verified-badge">
+						<div th:style="${'background-image: url(' + baseUrl + '/content/images/visa-secure.png)'}"></div>
+					</div>
+					<div class="logo-container">
+						<div th:style="${'background-image: url(' + baseUrl + '/content/images/logo.svg)'}" class="logo"></div>
+					</div>
+				</div>
+				<form th:action="${formAction}" method="GET">
+					<div class="content-main">
+						<div class="content-centered">
+							<div class="content-centered-middle">
+								<div id="code-display" class="code-display loading">
+									<div class="code-display-top">
+										<div th:style="${'background-image: url(' + baseUrl + '/content/images/lock.svg)'}" class="icon"></div>
+										<h1>[[${title}]]</h1>
+									</div>
+									<div class="code-display-middle">
+										<h2 id="code-display-code">[[${authorizationCode}]]</h2>
+									</div>
+									<div class="code-display-bottom">
+										<h3 class="description">[[${description}]]</h3>
+										<h3 class="additionalDescription">[[${additionalDescription}]]</h3>
+									</div>
+								</div>
+								<div class="in-page-error" th:if= "${errorTitle != '' && errorDescription != ''}">
+									<h2>[[${errorDescription}]]</h2>
+								</div>
+							</div>
+							<div class="content-centered-bottom">
+								<div class="buttons layout-vertical">
+									<ul class="buttons layout-vertical-wide">
+										<li class="primary">
+											<button type="submit" name="uiAction" value="AUTH_STATUS" class="button layout-default">[[${continueButtonLabel}]]</button>
+										</li>
+										<li class="primary">
+											<button type="submit" name="uiAction" value="GET_INITIAL_INFORMATION" class="button layout-link">[[${backButtonLabel}]]</button>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+            </div>
+        </div>
+	</body>
+</html>

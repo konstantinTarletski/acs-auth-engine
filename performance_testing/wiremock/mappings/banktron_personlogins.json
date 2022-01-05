@@ -1,0 +1,19 @@
+{
+    "priority": 1,
+    "request": {
+        "method": "ANY",
+        "url": "/services/lt/acs/personlogins"
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "personlogins.json",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "delayDistribution": {
+            "type": "uniform",
+            "lower": 400,
+            "upper": 600
+        }
+    }
+}

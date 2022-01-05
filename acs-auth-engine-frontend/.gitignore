@@ -1,0 +1,71 @@
+node_modules/
+.idea/
+.expo/
+.env
+.npmrc
+npm-debug.*
+
+/www/
+/www/application.js
+/www/application.js.map
+/www/polyfill.js
+/www/polyfill.js.map
+/www/index.html
+/www/src/
+/www/styleguide/
+/www/build/
+/www/dist/
+/www/*.css
+/www/*.map
+/dist/
+__snapshots__
+
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows thumbnail cache files
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# IntelliJ Idea
+*.iml
+
+# Tests
+/coverage

@@ -1,0 +1,23 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/jboss-net/services/SimpleInterfaceWS",
+		  "bodyPatterns": [
+            {
+                "contains": "getRidClientRemote"
+            }
+        ]
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "RoffID_2response.xml",
+        "headers": {
+            "Content-Type": "text/xml"
+        },
+        "delayDistribution": {
+            "type": "uniform",
+            "lower": 40,
+            "upper": 60
+        }
+    }
+}

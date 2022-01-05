@@ -1,0 +1,728 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://rid.ays.lv/" name="SimpleInterfaceRemote" targetNamespace="http://rid.ays.lv/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://rid.ays.lv/" elementFormDefault="unqualified" targetNamespace="http://rid.ays.lv/" version="1.0">
+
+  <xs:element name="checkCode" type="tns:checkCode"/>
+
+  <xs:element name="checkCodeResponse" type="tns:checkCodeResponse"/>
+
+  <xs:element name="checkPasswd1Remote" type="tns:checkPasswd1Remote"/>
+
+  <xs:element name="checkPasswd1RemoteResponse" type="tns:checkPasswd1RemoteResponse"/>
+
+  <xs:element name="checkPasswd2Remote" type="tns:checkPasswd2Remote"/>
+
+  <xs:element name="checkPasswd2RemoteResponse" type="tns:checkPasswd2RemoteResponse"/>
+
+  <xs:element name="codetableCheck" type="tns:codetableCheck"/>
+
+  <xs:element name="codetableCheckResponse" type="tns:codetableCheckResponse"/>
+
+  <xs:element name="codetableLoad" type="tns:codetableLoad"/>
+
+  <xs:element name="codetableLoadResponse" type="tns:codetableLoadResponse"/>
+
+  <xs:element name="findRidClientParams" type="tns:findRidClientParams"/>
+
+  <xs:element name="findRidClientParamsResponse" type="tns:findRidClientParamsResponse"/>
+
+  <xs:element name="getRidClientRemote" type="tns:getRidClientRemote"/>
+
+  <xs:element name="getRidClientRemoteResponse" type="tns:getRidClientRemoteResponse"/>
+
+  <xs:element name="journalWrite" type="tns:journalWrite"/>
+
+  <xs:element name="journalWriteResponse" type="tns:journalWriteResponse"/>
+
+  <xs:element name="sendCode" type="tns:sendCode"/>
+
+  <xs:element name="sendCodeResponse" type="tns:sendCodeResponse"/>
+
+  <xs:element name="smartIdAuthCheck" type="tns:smartIdAuthCheck"/>
+
+  <xs:element name="smartIdAuthCheckResponse" type="tns:smartIdAuthCheckResponse"/>
+
+  <xs:element name="smartIdAuthInit" type="tns:smartIdAuthInit"/>
+
+  <xs:element name="smartIdAuthInitResponse" type="tns:smartIdAuthInitResponse"/>
+
+  <xs:element name="smartIdSignCheck" type="tns:smartIdSignCheck"/>
+
+  <xs:element name="smartIdSignCheckResponse" type="tns:smartIdSignCheckResponse"/>
+
+  <xs:element name="smartIdSignInit" type="tns:smartIdSignInit"/>
+
+  <xs:element name="smartIdSignInitResponse" type="tns:smartIdSignInitResponse"/>
+
+  <xs:complexType name="getRidClientRemote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element name="arg1" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getRidClientRemoteResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ridClientDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridClientDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="cdate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="cif" type="xs:string"/>
+      <xs:element minOccurs="0" name="city" type="xs:string"/>
+      <xs:element minOccurs="0" name="clientId" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="country" type="xs:string"/>
+      <xs:element minOccurs="0" name="defaultCodetableId" type="xs:long"/>
+      <xs:element minOccurs="0" name="defaultCodetableName" type="xs:string"/>
+      <xs:element minOccurs="0" name="defaultCodetableType" type="xs:string"/>
+      <xs:element minOccurs="0" name="disableTable" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="forceChgPasswd" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="grantedSystems" nillable="true" type="tns:ridSystem"/>
+      <xs:element minOccurs="0" name="host" type="xs:string"/>
+      <xs:element minOccurs="0" name="internalId" type="xs:long"/>
+      <xs:element minOccurs="0" name="language" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastAuthMethod" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastLogin" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastRegSave" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="maxSessCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="owner" type="xs:string"/>
+      <xs:element minOccurs="0" name="passwdCheckAttempt" type="xs:long"/>
+      <xs:element minOccurs="0" name="passwdMode" type="xs:string"/>
+      <xs:element minOccurs="0" name="password1" type="xs:string"/>
+      <xs:element minOccurs="0" name="password2" type="xs:string"/>
+      <xs:element minOccurs="0" name="personalCode" type="xs:string"/>
+      <xs:element minOccurs="0" name="ridSystem" type="xs:string"/>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+      <xs:element name="smartId" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="state" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="street" type="xs:string"/>
+      <xs:element minOccurs="0" name="systemId" type="xs:string"/>
+      <xs:element minOccurs="0" name="zip" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridSystem">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="allowedUsers" nillable="true" type="tns:ridClient"/>
+      <xs:element minOccurs="0" name="cdate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="maxSessions" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridClients" nillable="true" type="tns:ridClient"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridSessions" nillable="true" type="tns:ridSession"/>
+      <xs:element minOccurs="0" name="ridSystemStatus" type="tns:ridSystemStatus"/>
+      <xs:element minOccurs="0" name="systemId" type="xs:string"/>
+      <xs:element minOccurs="0" name="timeout" type="xs:int"/>
+      <xs:element minOccurs="0" name="urlMask" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridClient">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="address" type="xs:string"/>
+      <xs:element minOccurs="0" name="cdate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="cif" type="xs:string"/>
+      <xs:element minOccurs="0" name="city" type="xs:string"/>
+      <xs:element minOccurs="0" name="clientId" type="xs:string"/>
+      <xs:element minOccurs="0" name="codeContact1" type="xs:string"/>
+      <xs:element minOccurs="0" name="codeContact2" type="xs:string"/>
+      <xs:element minOccurs="0" name="contactPhone" type="xs:string"/>
+      <xs:element minOccurs="0" name="country" type="xs:string"/>
+      <xs:element minOccurs="0" name="disableTable" type="xs:string"/>
+      <xs:element minOccurs="0" name="easyLoginStatus" type="xs:string"/>
+      <xs:element minOccurs="0" name="email" type="xs:string"/>
+      <xs:element minOccurs="0" name="firstName" type="xs:string"/>
+      <xs:element minOccurs="0" name="forceChgPasswd" type="xs:int"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="grantedSystems" nillable="true" type="tns:ridSystem"/>
+      <xs:element minOccurs="0" name="host" type="xs:string"/>
+      <xs:element minOccurs="0" name="internalId" type="xs:long"/>
+      <xs:element minOccurs="0" name="lastAuthMethod" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastEasyLogin" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastLogin" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastName" type="xs:string"/>
+      <xs:element minOccurs="0" name="lastRegSave" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastSmartIdLogin" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="lastStatusChangeDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="maxSessCount" type="xs:int"/>
+      <xs:element minOccurs="0" name="migrated" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="owner" type="xs:string"/>
+      <xs:element minOccurs="0" name="passwd2CheckAttempt" type="xs:long"/>
+      <xs:element minOccurs="0" name="passwd3CheckAttempt" type="xs:long"/>
+      <xs:element minOccurs="0" name="passwdChangePeriod" type="xs:int"/>
+      <xs:element minOccurs="0" name="passwdCheckAttempt" type="xs:long"/>
+      <xs:element minOccurs="0" name="passwdGenDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="passwdMode" type="xs:string"/>
+      <xs:element minOccurs="0" name="password1" type="xs:string"/>
+      <xs:element minOccurs="0" name="password2" type="xs:string"/>
+      <xs:element minOccurs="0" name="password3" type="xs:string"/>
+      <xs:element minOccurs="0" name="personalCode" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridClientParams" nillable="true" type="tns:ridClientParam"/>
+      <xs:element minOccurs="0" name="ridClientStatus" type="tns:ridClientStatus"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridDevices" nillable="true" type="tns:ridDevice"/>
+      <xs:element minOccurs="0" name="ridLanguage" type="tns:ridLanguage"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridSessions" nillable="true" type="tns:ridSession"/>
+      <xs:element minOccurs="0" name="ridSystem" type="tns:ridSystem"/>
+      <xs:element minOccurs="0" name="ridUserAuthData" type="tns:ridUserAuthData"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridUserAuthDatas" nillable="true" type="tns:ridUserAuthData"/>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+      <xs:element minOccurs="0" name="state" type="xs:string"/>
+      <xs:element name="statusReallySaved" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="street" type="xs:string"/>
+      <xs:element minOccurs="0" name="whenPasswd2Changed" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="zip" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridClientParam">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="ridClient" type="tns:ridClient"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+      <xs:element minOccurs="0" name="value" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridClientStatus">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridClients" nillable="true" type="tns:ridClient"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridDevice">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cdate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="id" type="xs:string"/>
+      <xs:element minOccurs="0" name="regDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="ridClient" type="tns:ridClient"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridLanguage">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="language" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridClients" nillable="true" type="tns:ridClient"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridMultilangDatas" nillable="true" type="tns:ridMultilangData"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridSessions" nillable="true" type="tns:ridSession"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridMultilangData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comp_id" type="tns:ridMultilangDataPK"/>
+      <xs:element minOccurs="0" name="ridLanguage" type="tns:ridLanguage"/>
+      <xs:element minOccurs="0" name="value" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridMultilangDataPK">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="key" type="xs:string"/>
+      <xs:element minOccurs="0" name="language" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ctime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="host" type="xs:string"/>
+      <xs:element minOccurs="0" name="prevSessionId" type="xs:string"/>
+      <xs:element minOccurs="0" name="ridClient" type="tns:ridClient"/>
+      <xs:element minOccurs="0" name="ridLanguage" type="tns:ridLanguage"/>
+      <xs:element minOccurs="0" name="ridSystem" type="tns:ridSystem"/>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+      <xs:element minOccurs="0" name="sid" type="xs:long"/>
+      <xs:element minOccurs="0" name="smartIdDocumentNr" type="xs:string"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridUserAuthData">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="assignmentDate" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="currentKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="isEnabled" type="xs:string"/>
+      <xs:element minOccurs="0" name="isFake" type="xs:string"/>
+      <xs:element minOccurs="0" name="ridAuthMethod" type="tns:ridAuthMethod"/>
+      <xs:element minOccurs="0" name="ridClient" type="tns:ridClient"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridClients" nillable="true" type="tns:ridClient"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridCodeTable" nillable="true" type="tns:ridCodeTable"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="tableId" type="xs:long"/>
+      <xs:element minOccurs="0" name="tableName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridAuthMethod">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="methodId" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridUserAuthDatas" nillable="true" type="tns:ridUserAuthData"/>
+      <xs:element minOccurs="0" name="valid" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridCodeTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="comp_id" type="tns:ridCodeTablePK"/>
+      <xs:element minOccurs="0" name="keyVal" type="xs:string"/>
+      <xs:element minOccurs="0" name="ridUserAuthData" type="tns:ridUserAuthData"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridCodeTablePK">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="keyNr" type="xs:long"/>
+      <xs:element minOccurs="0" name="tableId" type="xs:long"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridSystemStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="description" type="xs:string"/>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="ridSystems" nillable="true" type="tns:ridSystem"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="codetableCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element name="arg4" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="codetableCheckResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="codetableLoad">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="codetableLoadResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ridUserAuthDataDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridUserAuthDataDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="currentKey" type="xs:long"/>
+      <xs:element minOccurs="0" name="ridAuthMethod" type="xs:string"/>
+      <xs:element minOccurs="0" name="ridClient" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+      <xs:element minOccurs="0" name="tableId" type="xs:long"/>
+      <xs:element minOccurs="0" name="tableName" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findRidClientParams">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="findRidClientParamsResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:ridClientParamDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridClientParamDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="id" type="xs:long"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+      <xs:element minOccurs="0" name="ridClient" type="xs:string"/>
+      <xs:element minOccurs="0" name="type" type="xs:string"/>
+      <xs:element minOccurs="0" name="value" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdAuthInit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdAuthInitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ridSmartIdInitDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridSmartIdInitDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="hash" type="xs:string"/>
+      <xs:element minOccurs="0" name="status" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPasswd2Remote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPasswd2RemoteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPasswd1Remote">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkPasswd1RemoteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdSignCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdSignCheckResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ridSmartIdResponseDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridSmartIdResponseDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="documentNr" type="xs:string"/>
+      <xs:element minOccurs="0" name="hash" type="xs:string"/>
+      <xs:element minOccurs="0" name="level" type="xs:string"/>
+      <xs:element name="needCheck" type="xs:boolean"/>
+      <xs:element minOccurs="0" name="status" type="tns:eSmartIdStatus"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg4" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg5" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg6" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sendCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="journalWrite">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:ridLogDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="ridLogDTO">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="clientId" type="xs:string"/>
+      <xs:element minOccurs="0" name="eventId" type="xs:string"/>
+      <xs:element minOccurs="0" name="host" type="xs:string"/>
+      <xs:element minOccurs="0" name="jtime" type="xs:dateTime"/>
+      <xs:element minOccurs="0" name="owner" type="xs:string"/>
+      <xs:element minOccurs="0" name="recSeverity" type="xs:string"/>
+      <xs:element minOccurs="0" name="recType" type="xs:string"/>
+      <xs:element minOccurs="0" name="sessionId" type="xs:string"/>
+      <xs:element minOccurs="0" name="sid" type="xs:string"/>
+      <xs:element minOccurs="0" name="sortOrder" type="tns:sortOrder"/>
+      <xs:element minOccurs="0" name="systemId" type="xs:string"/>
+      <xs:element minOccurs="0" name="text1" type="xs:string"/>
+      <xs:element minOccurs="0" name="text2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="sortOrder">
+    <xs:sequence>
+      <xs:element name="ascending" type="xs:boolean"/>
+      <xs:element name="sortField" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="journalWriteResponse">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdSignInit">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdSignInitResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ridSmartIdInitDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkCode">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg3" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="checkCodeResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdAuthCheck">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+      <xs:element minOccurs="0" name="arg2" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="smartIdAuthCheckResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:ridSmartIdResponseDTO"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="eSmartIdStatus">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="OK"/>
+      <xs:enumeration value="ERROR"/>
+      <xs:enumeration value="CANCEL"/>
+      <xs:enumeration value="ERROR_ACCOUNT"/>
+      <xs:enumeration value="ERROR_ACCOUNT_TYPE"/>
+      <xs:enumeration value="ERROR_IMPLEMENTATION"/>
+      <xs:enumeration value="EXPIRED"/>
+      <xs:enumeration value="NOT_FOUND"/>
+      <xs:enumeration value="MAINTENANCE"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="codetableCheckResponse">
+    <wsdl:part element="ns1:codetableCheckResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRidClientRemote">
+    <wsdl:part element="ns1:getRidClientRemote" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="codetableCheck">
+    <wsdl:part element="ns1:codetableCheck" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="codetableLoad">
+    <wsdl:part element="ns1:codetableLoad" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findRidClientParams">
+    <wsdl:part element="ns1:findRidClientParams" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdAuthInit">
+    <wsdl:part element="ns1:smartIdAuthInit" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkPasswd2Remote">
+    <wsdl:part element="ns1:checkPasswd2Remote" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="journalWrite">
+    <wsdl:part element="ns1:journalWrite" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdSignInit">
+    <wsdl:part element="ns1:smartIdSignInit" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkCode">
+    <wsdl:part element="ns1:checkCode" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkPasswd1RemoteResponse">
+    <wsdl:part element="ns1:checkPasswd1RemoteResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdAuthCheck">
+    <wsdl:part element="ns1:smartIdAuthCheck" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdSignInitResponse">
+    <wsdl:part element="ns1:smartIdSignInitResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdAuthCheckResponse">
+    <wsdl:part element="ns1:smartIdAuthCheckResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="journalWriteResponse">
+    <wsdl:part element="ns1:journalWriteResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="codetableLoadResponse">
+    <wsdl:part element="ns1:codetableLoadResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkPasswd1Remote">
+    <wsdl:part element="ns1:checkPasswd1Remote" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdSignCheck">
+    <wsdl:part element="ns1:smartIdSignCheck" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendCode">
+    <wsdl:part element="ns1:sendCode" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="findRidClientParamsResponse">
+    <wsdl:part element="ns1:findRidClientParamsResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkCodeResponse">
+    <wsdl:part element="ns1:checkCodeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdAuthInitResponse">
+    <wsdl:part element="ns1:smartIdAuthInitResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="checkPasswd2RemoteResponse">
+    <wsdl:part element="ns1:checkPasswd2RemoteResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="sendCodeResponse">
+    <wsdl:part element="ns1:sendCodeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getRidClientRemoteResponse">
+    <wsdl:part element="ns1:getRidClientRemoteResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="smartIdSignCheckResponse">
+    <wsdl:part element="ns1:smartIdSignCheckResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="SimpleInterfaceRemote">
+    <wsdl:operation name="getRidClientRemote">
+      <wsdl:input message="ns1:getRidClientRemote" name="getRidClientRemote">
+    </wsdl:input>
+      <wsdl:output message="ns1:getRidClientRemoteResponse" name="getRidClientRemoteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="codetableCheck">
+      <wsdl:input message="ns1:codetableCheck" name="codetableCheck">
+    </wsdl:input>
+      <wsdl:output message="ns1:codetableCheckResponse" name="codetableCheckResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="codetableLoad">
+      <wsdl:input message="ns1:codetableLoad" name="codetableLoad">
+    </wsdl:input>
+      <wsdl:output message="ns1:codetableLoadResponse" name="codetableLoadResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRidClientParams">
+      <wsdl:input message="ns1:findRidClientParams" name="findRidClientParams">
+    </wsdl:input>
+      <wsdl:output message="ns1:findRidClientParamsResponse" name="findRidClientParamsResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdAuthInit">
+      <wsdl:input message="ns1:smartIdAuthInit" name="smartIdAuthInit">
+    </wsdl:input>
+      <wsdl:output message="ns1:smartIdAuthInitResponse" name="smartIdAuthInitResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPasswd2Remote">
+      <wsdl:input message="ns1:checkPasswd2Remote" name="checkPasswd2Remote">
+    </wsdl:input>
+      <wsdl:output message="ns1:checkPasswd2RemoteResponse" name="checkPasswd2RemoteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPasswd1Remote">
+      <wsdl:input message="ns1:checkPasswd1Remote" name="checkPasswd1Remote">
+    </wsdl:input>
+      <wsdl:output message="ns1:checkPasswd1RemoteResponse" name="checkPasswd1RemoteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdSignCheck">
+      <wsdl:input message="ns1:smartIdSignCheck" name="smartIdSignCheck">
+    </wsdl:input>
+      <wsdl:output message="ns1:smartIdSignCheckResponse" name="smartIdSignCheckResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendCode">
+      <wsdl:input message="ns1:sendCode" name="sendCode">
+    </wsdl:input>
+      <wsdl:output message="ns1:sendCodeResponse" name="sendCodeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="journalWrite">
+      <wsdl:input message="ns1:journalWrite" name="journalWrite">
+    </wsdl:input>
+      <wsdl:output message="ns1:journalWriteResponse" name="journalWriteResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdSignInit">
+      <wsdl:input message="ns1:smartIdSignInit" name="smartIdSignInit">
+    </wsdl:input>
+      <wsdl:output message="ns1:smartIdSignInitResponse" name="smartIdSignInitResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCode">
+      <wsdl:input message="ns1:checkCode" name="checkCode">
+    </wsdl:input>
+      <wsdl:output message="ns1:checkCodeResponse" name="checkCodeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdAuthCheck">
+      <wsdl:input message="ns1:smartIdAuthCheck" name="smartIdAuthCheck">
+    </wsdl:input>
+      <wsdl:output message="ns1:smartIdAuthCheckResponse" name="smartIdAuthCheckResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

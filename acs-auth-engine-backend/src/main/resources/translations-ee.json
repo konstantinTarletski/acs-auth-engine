@@ -1,0 +1,788 @@
+{
+  "en": {
+    "screens": {
+      "failure": {
+        "backToMerchantButton": "BACK TO THE MERCHANT"
+      },
+      "auth": {
+        "code": {
+          "title": "Control code:",
+          "description": {
+            "SMART_ID": "Login message was sent to your Smart-ID device.\n\nPLEASE NOTE: enter the PIN code only after making sure that the control code displayed on your phone matches the code displayed here!",
+            "M_SIGNATURE": "Login message was sent to your mobile phone.\n\nPLEASE NOTE: enter the PIN code only after making sure that the control code displayed on your phone matches the code displayed here!"
+          },
+          "appBasedDescription": {
+            "SMART_ID": "Login message was sent to your Smart-ID device.\n\nPLEASE NOTE: enter the PIN code only after making sure that the control code matches the code displayed here!",
+            "M_SIGNATURE": "Login message was sent to your mobile phone.\n\nPLEASE NOTE: enter the PIN code only after making sure that the control code matches the code displayed here!"
+          },
+          "appBasedAdditionalDescription": {
+            "SMART_ID": "After entering PIN code, return to this application and finish the authentication process by pressing \"Confirm\" button.\n\n{{PIN}}",
+            "M_SIGNATURE": "After entering PIN code, return to this application and finish the authentication process by pressing \"Confirm\" button.\n\n{{PIN}}"
+          }
+        },
+        "appBasedContinue": "CONFIRM",
+        "backButton": "BACK"
+      },
+      "authFailure": {
+        "buttons": {
+          "tryAgain": "BACK",
+          "cancel": "CANCEL"
+        }
+      },
+      "authSuccess": {
+        "justPaid": "Payment to merchant <bold>{{merchantName}}</bold> for <bold>{{sum}}</bold> has been confirmed",
+        "youWillBeRedirected": "You'll be redirected back to the merchants website after {{sec}} sec.",
+        "backToMerchantButton": "BACK TO THE MERCHANT"
+      },
+      "authCancel": {
+        "title": "Do you want to cancel your payment?",
+        "description": "If you cancel the payment, your purchase will not be confirmed",
+        "buttons": {
+          "continue": "CANCEL PAYMENT",
+          "back": "BACK"
+        }
+      },
+      "choose": {
+        "title": "Keep Your Account Safe",
+        "description": "Please authenticate the payment",
+        "buttons": {
+          "continue": "CONFIRM",
+          "cancel": "CANCEL"
+        },
+        "authMethods": {
+          "smartId": "Smart-ID",
+          "mobileId": "Mobile-ID",
+          "codeCalculator": "PIN-calculator",
+          "idCard": "ID-Card"
+        },
+        "disabledIdCardTooltip": {
+          "iframe": "Authentication using ID-card is not supported for this merchant",
+          "mobile": "Authentication using ID-card is not supported on your device"
+        }
+      },
+      "authEnterCode": {
+        "enterResponseCode": "Enter one-time code, which is displayed on the PIN-calculator screen (after the message “APPLI-“ appears, press 1).",
+        "confirmationCodeLabel": "PIN-calculator code",
+        "buttons": {
+          "continue": "CONFIRM",
+          "back": "BACK"
+        },
+        "unexpectedCharacterError": "Unexpected character"
+      },
+      "internetBankLogin": {
+        "enterInternetBankLogin": "-",
+        "loginCodeInputLabel": "-",
+        "buttons": {
+          "continue": "CONFIRM",
+          "cancel": "CANCEL"
+        },
+        "unexpectedCharacterError": "Unexpected character"
+      }
+    },
+    "paymentDetails": {
+      "amount": "AMOUNT",
+      "card": "PAYMENT CARD",
+      "merchant": "MERCHANT"
+    },
+    "general": {
+      "youCameFromWebsite": "You came here from <bold>{{merchantName}}</bold>"
+    },
+    "acsInternalMessages": {
+      "smartIdUserMessage": "-"
+    },
+    "errors": {
+      "INTERNAL_SERVICE_IS_NOT_REACHABLE": {
+        "title": "Payment was not authenticated",
+        "description": "Please re-initiate the purchase."
+      },
+      "NO_LOGINS_AVAILABLE": {
+        "title": "Payment could not be authenticated",
+        "description": "No valid Luminor Internet bank account."
+      },
+      "BLOCKED_LOGIN_CODE": {
+        "title": "Payment could not be authenticated",
+        "description": "Not valid or blocked Internet Bank login name because the login data might have been entered incorrectly."
+      },
+      "NO_SMART_ID": {
+        "title": "Payment could not be authenticated",
+        "description": "Chosen authentication method is not linked to your Internet bank login name."
+      },
+      "NO_PHONE_NUMBER": {
+        "title": "Payment was not authenticated",
+        "description": "In order to ensure security of your funds, please confirm that mobile phone number used for authentication is correct - log in to your Internet bank with M-signature. Repeat this purchase after confirmation."
+      },
+      "SMART_ID_BLOCKED": {
+        "title": "Payment was not authenticated",
+        "description": "Your Smart-ID account is suspended. Check your phone (Smart-ID application) for more details."
+      },
+      "SESSION_DOES_NOT_EXIST": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "SMART_ID_FAILED": {
+        "title": "Payment was not authenticated",
+        "description": "You have cancelled the purchase authentication."
+      },
+      "THIS_AUTHENTICATION_TYPE_CANNOT_BE_USED_WITH_THIS_LOGIN": {
+        "title": "Payment could not be authenticated",
+        "description": "Chosen authentication method is not linked to your login name at Internet bank."
+      },
+      "VALIDATE_SMART_ID": {
+        "title": "-",
+        "description": "-"
+      },
+      "MOBILE_ID_FAILED": {
+        "title": "Payment was not authenticated",
+        "description": "You have cancelled the purchase authentication."
+      },
+      "SK74_NO_MID_CERT": {
+        "title": "Payment was not authenticated",
+        "description": "Mobile phone number has no active signature certificates."
+      },
+      "SK73_TIMEOUT": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again: check your phone for more details and follow authentication steps."
+      },
+      "OTHER_SESSION_END_RESULT_CODE": {
+        "title": "Payment was not authenticated",
+        "description": "Re-initiate the purchase or choose another authentication method you are usually using."
+      },
+      "SK75_MID_CONFIG_ERROR": {
+        "title": "Payment was not authenticated",
+        "description": "M-signature configuration on SIM card differs from what is configured on service provider's side. Please contact your mobile operator. (75)"
+      },
+      "SK76_SIM_NOT_AVAILABLE": {
+        "title": "Payment was not authenticated",
+        "description": "Re-initiate the purchase or choose another authentication method you are usually using. (76)"
+      },
+      "SK77_SMS_SENDING_ERROR": {
+        "title": "Payment was not authenticated",
+        "description": "Re-initiate the purchase or choose another authentication method you are usually using. (77)"
+      },
+      "SK78_SIM_ERROR": {
+        "title": "Payment was not authenticated",
+        "description": "Re-initiate the purchase or choose another authentication method you are usually using. (78)"
+      },
+      "AUTHENTICATION_FAILED": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "AUTH_TYPE_TEMP_DISABLED": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "SMART_ID_TIMEOUT": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "SESSION_HAS_EXPIRED": {
+        "title": "Payment was not authenticated",
+        "description": "The time for purchase authentication has expired."
+      },
+      "WRONG_CODE_FOR_CODE_CALCULATOR": {
+        "title": "Incorrect code",
+        "description": "Incorrect code. Please try again"
+      },
+      "OPERATION_FAILED": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "OPERATION_TERMINATED": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "FATAL_EXCEPTION": {
+        "title": "Payment was not authenticated",
+        "description": "Please re-initiate the purchase."
+      },
+      "LOGIN_NOT_ACTIVE": {
+        "title": "Payment could not be authenticated",
+        "description": "Not valid or blocked Internet Bank login name because the login data might have been entered incorrectly."
+      },
+      "NO_SUPPORTED_AUTH_METHODS_AVAILABLE": {
+        "title": "Payment could not be authenticated",
+        "description": "You do not have valid authentication tool linked to your login name at Internet Bank."
+      },
+      "EXCEEDED_MAX_ATTEMPTS_FOR_AUTH_METHOD_CHANGE": {
+        "title": "Payment was not authenticated",
+        "description": "You have exceeded allowed count of changing the authentication methods. Please re-initiate the purchase."
+      },
+      "EXCEEDED_MAX_ATTEMPTS_FOR_ENTERING_LOGIN": {
+        "title": "Incorrect login name",
+        "description": "Make sure you enter correct Internet bank login name and re-initiate the purchase."
+      },
+      "NO_MATCHING_LOGIN_FOUND": {
+        "title": "Incorrect login name.",
+        "description": "Incorrect login name. Please try again."
+      },
+      "NO_ACTIVE_PERSON_ACCOUNTS_FOUND": {
+        "title": "Payment could not be authenticated",
+        "description": "No valid Luminor Internet bank account."
+      },
+      "NO_PERSON_ACCOUNTS_FOUND": {
+        "title": "Payment could not be authenticated",
+        "description": "No valid Luminor Internet bank account."
+      },
+      "CARD_IS_BLOCKED": {
+        "title": "The payment card is not valid",
+        "description": "Check your card status in the Internet bank and make sure E-purchase service is enabled."
+      },
+      "CARD_BLOCKED_CMS": {
+        "title": "The payment card is not valid",
+        "description": "Check your card status in the Internet bank and make sure E-purchase service is enabled."
+      },
+      "CARD_BLOCKED_RMS": {
+        "title": "The payment card is not valid",
+        "description": "Check your card status in the Internet bank and make sure E-purchase service is enabled."
+      },
+      "CARD_BLOCKED_ECOMMERCE": {
+        "title": "The payment card is not valid",
+        "description": "Check your card status in the Internet bank and make sure E-purchase service is enabled."
+      },
+      "GENERAL_EXCEPTION": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "JSON_BODY_VALIDATION_EXCEPTION": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "AUTHENTICATION_TYPE_NOT_ALLOWED": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "WRONG_APPLICATION_STATE": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      },
+      "TRANSLATED_ERROR": {
+        "title": "Payment was not authenticated",
+        "description": "Please try again."
+      }
+    }
+  },
+  "et": {
+    "screens": {
+      "failure": {
+        "backToMerchantButton": "TAGASI KAUPMEHE JUURDE"
+      },
+      "auth": {
+        "code": {
+          "title": "KONTROLLKOOD:",
+          "description": {
+            "SMART_ID": "Pane tähele: enne PIN koodi sisestamist veendu, et kontrollkood sinu telefonis vastab kontrollkoodile, mida kuvatakse siin!",
+            "M_SIGNATURE": "Pane tähele: enne PIN koodi sisestamist veendu, et kontrollkood sinu telefonis vastab kontrollkoodile, mida kuvatakse siin!"
+          },
+          "appBasedDescription": {
+            "SMART_ID": "Sisselogimisteade saadeti Teie Smart ID seadmesse\n\nPane tähele: enne PIN koodi sisestamist veendu, et kontrollkood sinu telefonis vastab kontrollkoodile, mida kuvatakse siin!",
+            "M_SIGNATURE": "Sisselogimisteade saadeti Teie mobiiltelefonile\n\nPane tähele: enne PIN koodi sisestamist veendu, et kontrollkood sinu telefonis vastab kontrollkoodile, mida kuvatakse siin!"
+          },
+          "appBasedAdditionalDescription": {
+            "SMART_ID": "Pärast PIN-koodi sisestamist naaske  rakenduse juurde ja lõpetage autentimisprotsess, vajutades nuppu \"Kinnita\".\n\n{{PIN}}",
+            "M_SIGNATURE": "Pärast PIN-koodi sisestamist naaske  rakenduse juurde ja lõpetage autentimisprotsess, vajutades nuppu \"Kinnita\".\n\n{{PIN}}"
+          }
+        },
+        "appBasedContinue": "KINNITA",
+        "backButton": "TAGASI"
+      },
+      "authFailure": {
+        "buttons": {
+          "tryAgain": "TAGASI",
+          "cancel": "TÜHISTA"
+        }
+      },
+      "authSuccess": {
+        "justPaid": "Makse kaupmehele <bold>{{merchantName}}</bold> summas <bold>{{sum}}</bold> on kinnitatud",
+        "youWillBeRedirected": "Sind suunatakse tagasi kaupmehe lehele {{sec}} jooksul",
+        "backToMerchantButton": "TAGASI KAUPMEHE JUURDE"
+      },
+      "authCancel": {
+        "title": "Kas sa soovid oma makse tühistada?",
+        "description": "Kui sa valid tühista, siis sinu makset ei kinnitata",
+        "buttons": {
+          "continue": "TÜHISTA MAKSE",
+          "back": "TAGASI"
+        }
+      },
+      "choose": {
+        "title": "Hoia oma konto turvalisena",
+        "description": "Palun autendi makse",
+        "buttons": {
+          "continue": "KINNITA",
+          "cancel": "TÜHISTA"
+        },
+        "authMethods": {
+          "smartId": "Smart-ID",
+          "mobileId": "Mobiil-ID",
+          "codeCalculator": "PIN-kalkulaator",
+          "idCard": "ID-kaart"
+        },
+        "disabledIdCardTooltip": {
+          "iframe": "Tehingut ei õnnestunud autentida. Autentimine ID-card kaudu ei ole saadaval",
+          "mobile": "Sinu seade ei toeta ID kaardiga tuvastamist"
+        }
+      },
+      "authEnterCode": {
+        "enterResponseCode": "Sisesta PIN- kalkulaatoril kuvatav ühekordne kood(kui ilmub teade \"APPLI -\", vajuta 1).",
+        "confirmationCodeLabel": "PIN-kalkulaatori kood:",
+        "buttons": {
+          "continue": "KINNITA",
+          "back": "TAGASI"
+        },
+        "unexpectedCharacterError": "Vale tähemärk"
+      },
+      "internetBankLogin": {
+        "enterInternetBankLogin": "-",
+        "loginCodeInputLabel": "-",
+        "buttons": {
+          "continue": "KINNITA",
+          "cancel": "TÜHISTA"
+        },
+        "unexpectedCharacterError": "Vale tähemärk"
+      }
+    },
+    "paymentDetails": {
+      "amount": "SUMMA",
+      "card": "MAKSEKAART",
+      "merchant": "KAUPMEES"
+    },
+    "general": {
+      "youCameFromWebsite": "Suunamine kaupmehe <bold>{{merchantName}}</bold> juurest"
+    },
+    "acsInternalMessages": {
+      "smartIdUserMessage": "-"
+    },
+    "errors": {
+      "INTERNAL_SERVICE_IS_NOT_REACHABLE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun algata makse uuesti."
+      },
+      "NO_LOGINS_AVAILABLE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Kehtivat Luminori internetipanga kasutajat ei leitud."
+      },
+      "BLOCKED_LOGIN_CODE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Kehtivat Luminori internetipanga kasutajat ei leitud või see on blokeeritud."
+      },
+      "NO_SMART_ID": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Valitud autentimismeetod ei ole seotud internetipanga kasutajaga."
+      },
+      "NO_PHONE_NUMBER": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Turvalisuse huvides palun kinnita, et autentimisel kasutatud telefoninumber on õige. Selleks logi sisse oma internetipanka kasutades mobiil-ID. Peale kinnituse saamist algata makse uuesti."
+      },
+      "SMART_ID_BLOCKED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Smart-ID konto on blokeeritud. Kontrolli oma Smart-ID rakendust lisainfo saamiseks."
+      },
+      "SESSION_DOES_NOT_EXIST": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "SMART_ID_FAILED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Oled autentimise tühistanud."
+      },
+      "THIS_AUTHENTICATION_TYPE_CANNOT_BE_USED_WITH_THIS_LOGIN": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Valitud autentimise meetod ei ole seotud sinu internetipanga kasutajaga."
+      },
+      "VALIDATE_SMART_ID": {
+        "title": "-",
+        "description": "-"
+      },
+      "MOBILE_ID_FAILED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Oled autentimise tühistanud."
+      },
+      "SK74_NO_MID_CERT": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Mobiil ID sertifikaadid on aktiveerimata."
+      },
+      "SK73_TIMEOUT": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti:vaata lisainfot oma mobiil-ID rakendusest ja järgi ekraanil olevaid juhiseid."
+      },
+      "OTHER_SESSION_END_RESULT_CODE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Algata makse uuesti või vali autentimise meetod,mida tavaliselt kasutad."
+      },
+      "SK75_MID_CONFIG_ERROR": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "M-allkirja seaded SIM kaardil erinevad teenuse pakkuja seadetest. Palun kontakteeru oma mobiilsideoperaatoriga."
+      },
+      "SK76_SIM_NOT_AVAILABLE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Algata makse uuesti või vali autentimise meetod,mida tavaliselt kasutad."
+      },
+      "SK77_SMS_SENDING_ERROR": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Algata makse uuesti või vali autentimise meetod,mida tavaliselt kasutad."
+      },
+      "SK78_SIM_ERROR": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Algata makse uuesti või vali autentimise meetod,mida tavaliselt kasutad."
+      },
+      "AUTHENTICATION_FAILED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "AUTH_TYPE_TEMP_DISABLED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "SMART_ID_TIMEOUT": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "SESSION_HAS_EXPIRED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Makse autentimise sessioon on aegunud."
+      },
+      "WRONG_CODE_FOR_CODE_CALCULATOR": {
+        "title": "Vale kood",
+        "description": "Vale PIN-kalkulaatori kood."
+      },
+      "OPERATION_FAILED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "OPERATION_TERMINATED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "FATAL_EXCEPTION": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "LOGIN_NOT_ACTIVE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Puudub kehtiv internetipanga kasutajatunnus või on kasutaja blokeeritud."
+      },
+      "NO_SUPPORTED_AUTH_METHODS_AVAILABLE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "TODO"
+      },
+      "EXCEEDED_MAX_ATTEMPTS_FOR_AUTH_METHOD_CHANGE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Lubatud autentimismeetodite muutmise arv on ületatud. Palun algata makse uuesti."
+      },
+      "EXCEEDED_MAX_ATTEMPTS_FOR_ENTERING_LOGIN": {
+        "title": "Valesti sisestatud kasutajatunnus",
+        "description": "Veendu, et sisestatud kasutajatunnus on õige ja algata makse uuesti."
+      },
+      "NO_MATCHING_LOGIN_FOUND": {
+        "title": "Vale kasutajatunnus",
+        "description": " Valesti sisestatud kasutajatunnus."
+      },
+      "NO_ACTIVE_PERSON_ACCOUNTS_FOUND": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Puudub kehtiv Luminori internetipanga kasutaja."
+      },
+      "NO_PERSON_ACCOUNTS_FOUND": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Puudub kehtiv Luminori internetipanga kasutaja."
+      },
+      "CARD_IS_BLOCKED": {
+        "title": "Kaart ei ole kehtiv",
+        "description": "Kontrolli internetipangas, et internetiostude võimalus on aktiveeritud."
+      },
+      "CARD_BLOCKED_CMS": {
+        "title": "Kaart ei ole kehtiv",
+        "description": "Kontrolli internetipangas, et internetiostude võimalus on aktiveeritud."
+      },
+      "CARD_BLOCKED_RMS": {
+        "title": "Kaart ei ole kehtiv",
+        "description": "Kontrolli internetipangas, et internetiostude võimalus on aktiveeritud."
+      },
+      "CARD_BLOCKED_ECOMMERCE": {
+        "title": "Kaart ei ole kehtiv",
+        "description": "Kontrolli internetipangas, et internetiostude võimalus on aktiveeritud."
+      },
+      "GENERAL_EXCEPTION": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "JSON_BODY_VALIDATION_EXCEPTION": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "AUTHENTICATION_TYPE_NOT_ALLOWED": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "WRONG_APPLICATION_STATE": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      },
+      "TRANSLATED_ERROR": {
+        "title": "Makse autentimine ebaõnnestus",
+        "description": "Palun proovi uuesti."
+      }
+    }
+  },
+  "ru": {
+    "screens": {
+      "failure": {
+        "backToMerchantButton": "ВЕРНУТЬСЯ К ТОРГОВЦУ"
+      },
+      "auth": {
+        "code": {
+          "title": "Контрольный код:",
+          "description": {
+            "SMART_ID": "Собщение для подключения отправлено на ваше мобильное устройство.\n\nПожалуйста, обратите внимание: введите PIN-код только после того, как убедитесь, что контрольный код, отображаемый на вашем телефоне, совпадает с кодом, отображаемым здесь!",
+            "M_SIGNATURE": "Сообщение для подключения отправлено на ваше мобильное устройство.\n\nПожалуйста, обратите внимание: введите PIN-код только после того, как убедитесь, что контрольный код, отображаемый на вашем телефоне, совпадает с кодом, отображаемым здесь!"
+          },
+          "appBasedDescription": {
+            "SMART_ID": "Собщение для подключения отправлено на ваше мобильное устройство.\n\nПожалуйста, обратите внимание: введите PIN-код только после того, как убедитесь, что контрольный код, отображаемый на вашем телефоне, совпадает с кодом, отображаемым здесь!",
+            "M_SIGNATURE": "Сообщение для подключения отправлено на ваше мобильное устройство.\n\nПожалуйста, обратите внимание: введите PIN-код только после того, как убедитесь, что контрольный код, отображаемый на вашем телефоне, совпадает с кодом, отображаемым здесь!"
+          },
+          "appBasedAdditionalDescription": {
+            "SMART_ID": "После ввода ПИН-кода вернитесь в это приложение и завершите процесс аутентификации, нажав кнопку «Подтвердить».\n\n{{PIN}}",
+            "M_SIGNATURE": "После ввода ПИН-кода вернитесь в это приложение и завершите процесс аутентификации, нажав кнопку «Подтвердить».\n\n{{PIN}}"
+          }
+        },
+        "appBasedContinue": "ПОДТВЕРДИТЬ",
+        "backButton": "НАЗАД"
+      },
+      "authFailure": {
+        "buttons": {
+          "tryAgain": "НАЗАД",
+          "cancel": "ОТМЕНИТЬ"
+        }
+      },
+      "authSuccess": {
+        "justPaid": "Платеж торговцу <bold>{{merchantName}}</bold> на сумму <bold>{{sum}}</bold> подтвержден",
+        "youWillBeRedirected": "Вы будете перенаправлены обратно на сайт продавца через {{sec}} сек.",
+        "backToMerchantButton": "ВЕРНУТЬСЯ К ТОРГОВЦУ"
+      },
+      "authCancel": {
+        "title": "Вы хотите отменить свой платеж?",
+        "description": "Если вы отмените платеж, то ваша покупка не будет подтверждена.",
+        "buttons": {
+          "continue": "ОТМЕНИТЬ ПЛАТЕЖ",
+          "back": "НАЗАД"
+        }
+      },
+      "choose": {
+        "title": "Храните свой счет в безопасности",
+        "description": "Пожалуйста, подтвердите платеж",
+        "buttons": {
+          "continue": "ПОДТВЕРДИТЬ",
+          "cancel": "ОТМЕНИТЬ"
+        },
+        "authMethods": {
+          "smartId": "Smart-ID",
+          "mobileId": "Mobiil-ID",
+          "codeCalculator": "PIN-калькулятор",
+          "idCard": "ID-карта"
+        },
+        "disabledIdCardTooltip": {
+          "iframe": "Аутентификация с использованием ID-карты не поддерживается для данного продовца",
+          "mobile": "Аутентификация с использованием ID-карты не поддерживается на Вашем устройстве"
+        }
+      },
+      "authEnterCode": {
+        "enterResponseCode": "Введите одноразовый код, который отображается на экране PIN-калькулятора (после появления сообщения “APPLI-“ нажмите 1).",
+        "confirmationCodeLabel": "PIN-калькулятор:",
+        "buttons": {
+          "continue": "ПОДТВЕРДИТЬ",
+          "back": "НАЗАД"
+        },
+        "unexpectedCharacterError": "Неверный символ"
+      },
+      "internetBankLogin": {
+        "enterInternetBankLogin": "-",
+        "loginCodeInputLabel": "-",
+        "buttons": {
+          "continue": "ПОДТВЕРДИТЬ",
+          "cancel": "НАЗАД"
+        },
+        "unexpectedCharacterError": "Неверный символ"
+      }
+    },
+    "paymentDetails": {
+      "amount": "СУММА",
+      "card": "ПЛАТЕЖНАЯ КАРТА",
+      "merchant": "ТОРГОВЕЦ"
+    },
+    "general": {
+      "youCameFromWebsite": "Вы были перенаправлены сюда с <bold>{{merchantName}}</bold>"
+    },
+    "acsInternalMessages": {
+      "smartIdUserMessage": "-"
+    },
+    "errors": {
+      "INTERNAL_SERVICE_IS_NOT_REACHABLE": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "NO_LOGINS_AVAILABLE": {
+        "title": "Платеж не может быть аутентифицирован",
+        "description": "У вас нет действующего номера пользователя Интернет-банка."
+      },
+      "BLOCKED_LOGIN_CODE": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "У вас нет действующего номера пользователя Интернет-банка или он заблокирован, поскольку, возможно, были введены неверные данные."
+      },
+      "NO_SMART_ID": {
+        "title": "Платеж не может быть аутентифицирован",
+        "description": "Выбранный метод аутентификации непривязан к вашему номеру пользователя в Интернет-банке."
+      },
+      "NO_PHONE_NUMBER": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Чтобы обеспечить безопасность ваших средств, пожалуйста, подтвердите правильность номера мобильного телефона, используемого для аутентификации - войдите в свой Интернет-банк, используя mobiil-ID. После подтверждения повторите покупку."
+      },
+      "SMART_ID_BLOCKED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Ваша учетная запись Smart-ID заблокирована. Проверьте сообщение в телефоне (в приложении Smart-ID). "
+      },
+      "SESSION_DOES_NOT_EXIST": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "SMART_ID_FAILED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Вы отменили аутентификацию покупки."
+      },
+      "THIS_AUTHENTICATION_TYPE_CANNOT_BE_USED_WITH_THIS_LOGIN": {
+        "title": "Платеж не может быть аутентифицирован",
+        "description": "Выбранный метод аутентификации непривязан к вашему номеру пользователя Интернет-банка."
+      },
+      "VALIDATE_SMART_ID": {
+        "title": "-",
+        "description": "-"
+      },
+      "MOBILE_ID_FAILED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Вы отменили аутентификацию покупки."
+      },
+      "SK74_NO_MID_CERT": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "У вашего номера мобильного телефона нет активных сертификатов подписи."
+      },
+      "SK73_TIMEOUT": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз: проверьте сообщение на вашем телефоне  и выполните пошаговую аутентификацию."
+      },
+      "OTHER_SESSION_END_RESULT_CODE": {
+        "title": "Платеж не аутентифицирован",
+        "description": "Начните покупку снова или выберите другой метод аутентификации, который вы обычно используете."
+      },
+      "SK75_MID_CONFIG_ERROR": {
+        "title": "Платеж не аутентифицирован",
+        "description": "Конфигурация M-подписи на SIM-карте отличается от конфигурации оператора связи. Обратитесь к своему оператору мобильной связи. (75)"
+      },
+      "SK76_SIM_NOT_AVAILABLE": {
+        "title": "Платеж не аутентифицирован",
+        "description": "Начните покупку снова или выберите другой метод аутентификации, который вы обычно используете. (76)"
+      },
+      "SK77_SMS_SENDING_ERROR": {
+        "title": "Платеж не аутентифицирован",
+        "description": "Начните покупку снова или выберите другой метод аутентификации, который вы обычно используете. (77)"
+      },
+      "SK78_SIM_ERROR": {
+        "title": "Платеж не аутентифицирован",
+        "description": "Начните покупку снова или выберите другой метод аутентификации, который вы обычно используете. (78)"
+      },
+      "AUTHENTICATION_FAILED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "AUTH_TYPE_TEMP_DISABLED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "SMART_ID_TIMEOUT": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "SESSION_HAS_EXPIRED": {
+        "title": "Платеж не прошел  утентификацию",
+        "description": "Срок аутентификации покупки истек."
+      },
+      "WRONG_CODE_FOR_CODE_CALCULATOR": {
+        "title": "Неверный код",
+        "description": "Неверный код калькулятора кодов. Пожалуйста, попробуйте еще раз."
+      },
+      "OPERATION_FAILED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "OPERATION_TERMINATED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "FATAL_EXCEPTION": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "LOGIN_NOT_ACTIVE": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "У вас нет действующего номера пользователя Интернет-банка или он заблокирован, поскольку, возможно, были введены неверные данные."
+      },
+      "NO_SUPPORTED_AUTH_METHODS_AVAILABLE": {
+        "title": "Платеж не может быть аутентифицирован",
+        "description": "K вашему номеру пользователя в Интернет-банке непривязан действующий метод аутентификации."
+      },
+      "EXCEEDED_MAX_ATTEMPTS_FOR_AUTH_METHOD_CHANGE": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Количество изменений методов аутентификации превышает допустимое. Пожалуйста, начните покупку снова."
+      },
+      "EXCEEDED_MAX_ATTEMPTS_FOR_ENTERING_LOGIN": {
+        "title": "Неверный код входа в систему",
+        "description": "Убедитесь, что вы ввели правильный номер пользователя Интернет-банка, и попробуйте еще раз."
+      },
+      "NO_MATCHING_LOGIN_FOUND": {
+        "title": "Неверный номер пользователя",
+        "description": "Неверный номер пользователя Интернет-банка. Пожалуйста, попробуйте еще раз."
+      },
+      "NO_ACTIVE_PERSON_ACCOUNTS_FOUND": {
+        "title": "Платеж не может быть аутентифицирован",
+        "description": "У вас нет действующего номера пользователя Интернет-банка."
+      },
+      "NO_PERSON_ACCOUNTS_FOUND": {
+        "title": "Платеж не может быть аутентифицирован",
+        "description": "У вас нет действующего номера пользователя Интернет-банка."
+      },
+      "CARD_IS_BLOCKED": {
+        "title": "Платежная карта недействительна",
+        "description": "Проверьте статус своей карты в Интернет-банке и убедитесь, что включена услуга покупок интернете."
+      },
+      "CARD_BLOCKED_CMS": {
+        "title": "Платежная карта недействительна",
+        "description": "Проверьте статус своей карты в Интернет-банке и убедитесь, что включена услуга покупок интернете."
+      },
+      "CARD_BLOCKED_RMS": {
+        "title": "Платежная карта недействительна",
+        "description": "Проверьте статус своей карты в Интернет-банке и убедитесь, что включена услуга покупок интернете."
+      },
+      "CARD_BLOCKED_ECOMMERCE": {
+        "title": "Платежная карта недействительна",
+        "description": "Проверьте статус своей карты в Интернет-банке и убедитесь, что включена услуга покупок интернете."
+      },
+      "GENERAL_EXCEPTION": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "JSON_BODY_VALIDATION_EXCEPTION": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "AUTHENTICATION_TYPE_NOT_ALLOWED": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "WRONG_APPLICATION_STATE": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      },
+      "TRANSLATED_ERROR": {
+        "title": "Платеж не прошел аутентификацию",
+        "description": "Пожалуйста, попробуйте еще раз."
+      }
+    }
+  }
+}

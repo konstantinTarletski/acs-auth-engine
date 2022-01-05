@@ -1,0 +1,18 @@
+{
+    "request": {
+        "method": "ANY",
+        "url": "/services/lt/acs/confirmcredentials"
+    },
+    "response": {
+        "status": 200,
+        "body": "{}",
+        "headers": {
+            "Content-Type": "application/json"
+        },
+        "delayDistribution": {
+            "type": "uniform",
+            "lower": 400,
+            "upper": 600
+        }
+    }
+}

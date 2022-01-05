@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+      <ns2:smartIdAuthCheckResponse xmlns:ns2='http://rid.ays.lv/'>
+<!-- optional -->
+  <return>
+<!-- optional -->
+    <documentNr>123</documentNr>
+<!-- optional -->
+    <hash>123</hash>
+<!-- optional -->
+    <level>1</level>
+    <needCheck>false</needCheck>
+<!-- optional -->
+<!-- possible value: OK, possible value: ERROR, possible value: CANCEL, possible value: ERROR_ACCOUNT, possible value: ERROR_ACCOUNT_TYPE, possible value: ERROR_IMPLEMENTATION, possible value: EXPIRED, possible value: NOT_FOUND, possible value: MAINTENANCE -->
+    <status>OK</status>
+  </return>
+</ns2:smartIdAuthCheckResponse>
+    </S:Body>
+</S:Envelope>

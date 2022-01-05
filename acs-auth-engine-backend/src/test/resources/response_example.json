@@ -1,0 +1,19 @@
+{
+  "authenticationData": {
+    "phone": "+371 27789277",
+    "otpGeneratedDateTime": 1593523144017,
+    "mobile": [
+      "+371 27789277"
+    ],
+    "otp": "b680870475ce5dbc255ceccbce3255ead79da912",
+    "lang": "en",
+    "acsPanRange": "reference"
+  },
+  "acsAuthenticationMethod": "02",
+  "acsTransID": "01c62048-8d26-41cc-8987-7cfafb39480d",
+  "templateName": "html_brw05_otp.html",
+  "templateLanguage": "en",
+  "content": "<!DOCTYPE HTML><html><head><title>3DS - One-Time Passcode</title></head><body> some <form name=\"one_time_password_form\">....</form></body></html>",
+  "transStatus": "C",
+  "statusCode": "200"
+}

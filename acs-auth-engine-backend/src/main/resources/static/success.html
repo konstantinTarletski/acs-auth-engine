@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+        <title>Luminor</title>
+        <link rel="shortcut icon" type="image/ico" th:href="${baseUrl + '/content/favicon.ico'}">
+		<link th:href="${baseUrl + '/content/styles/application.css'}" rel="stylesheet"></head>
+	</head>
+    <body class="prod">
+        <div id="root">
+            <div class="frame-main">
+                <div th:style="${'background-image: url(' + baseUrl + '/content/images/bg.svg)'}" class="bg"></div>
+				<div class="header-main">
+					<div class="verified-badge">
+						<div th:style="${'background-image: url(' + baseUrl + '/content/images/visa-secure.png)'}"></div>
+					</div>
+					<div class="logo-container">
+						<div th:style="${'background-image: url(' + baseUrl + '/content/images/logo.svg)'}" class="logo"></div>
+					</div>
+				</div>
+				<form th:action="${formAction}" method="GET">
+					<div class="content-main">
+						<div class="content-centered">
+							<div class="content-centered-middle">
+								<div class="code-display success">
+									<div class="code-display-top">
+										<div th:style="${'background-image: url(' + baseUrl + '/content/images/done.svg)'}" class="icon"></div>
+									</div>
+								</div>
+							</div>
+							<div class="content-centered-bottom">
+								<h1 th:utext="${title}"></h1>
+								<ul class="buttons layout-vertical-wide">
+									<li class="primary">
+										<button type="submit" name="uiAction" value="BACK_TO_MERCHANT_SUCCESS" class="button layout-default">[[${backToMerchantButtonLabel}]]</button>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</form>
+            </div>
+        </div>
+	</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "es2016"
+    ],
+    "moduleResolution": "node",
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitReturns": false, // because of luminor-components issues
+    "noImplicitThis": true,
+    "noImplicitAny": false,
+    "resolveJsonModule": true,
+    "noUnusedLocals": false, // because of luminor-components issues
+    "sourceMap": true,
+    "jsx": "react",
+    "outDir": "www",
+    "types": [
+      "webpack-env",
+      "node",
+      "jest"
+    ],
+    "importHelpers": true,
+    "noEmitHelpers": true,
+    "strict": false,
+    "skipLibCheck": true,
+    "baseUrl": "./",
+    "rootDir": "./",
+    "paths": {
+      "assets/*": [
+        "./src/assets/*"
+      ],
+      "common/*": [
+        "src/common/*"
+      ],
+      "consts/*": [
+        "src/consts/*"
+      ],
+      "components/*": [
+        "./src/components/*"
+      ],
+      "screens/*": [
+        "./src/screens/*"
+      ],
+      "data/*": [
+        "./src/data/*"
+      ],
+      "utils/*": [
+        "./src/utils/*"
+      ]
+    }
+  },
+  "include": [
+    "./*",
+    "./config/*",
+    "./scripts/*",
+    "./src/**/*"
+  ]
+}

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:findRidClientParamsResponse xmlns:ns2="http://rid.ays.lv/">
+           <return>
+<!-- optional -->
+    <id>1</id>
+<!-- optional -->
+    <name>VISA(EUR)...1234</name>
+<!-- optional -->
+    <ridClient>1234</ridClient>
+<!-- optional -->
+    <type>card</type>
+<!-- optional -->
+    <value>card=1234%expiry=2304%readonly=n</value>
+  </return>
+        </ns2:findRidClientParamsResponse>
+    </S:Body>
+</S:Envelope>

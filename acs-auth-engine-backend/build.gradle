@@ -1,0 +1,71 @@
+plugins {
+    id 'org.springframework.boot' version "${springBootVersion}"
+    id 'java'
+}
+
+apply plugin: "org.springframework.boot"
+apply plugin: "java"
+
+group = 'lv.bank.acs'
+version = '0.0.1-SNAPSHOT'
+description = 'ACS Auth Engine (backend)'
+sourceCompatibility = '11'
+
+repositories {
+    maven {
+        url = uri(project.property('artifactory.url') + '/cards-mvn-releases')
+        credentials {
+            username project.property('artifactory.username')
+            password project.property('artifactory.password')
+        }
+    }
+}
+
+dependencies {
+
+    implementation "org.springframework.boot:spring-boot-starter-web:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-validation:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-data-jpa:${springBootVersion}"
+    implementation "org.springframework.boot:spring-boot-starter-thymeleaf:${springBootVersion}"
+    implementation "org.apache.commons:commons-lang3:3.11"
+    implementation "javax.xml.ws:jaxws-api:2.3.1"
+    implementation "com.sun.xml.ws:rt:2.3.3"
+    implementation "lv.bank:roofSimpleInterfaceWSClient:1.1.0"
+    implementation "lv.bank:bankCardsWSClient:1.0.1"
+    implementation "org.projectlombok:lombok:${lombokVersion}"
+    implementation "com.h2database:h2:${h2Version}"
+    implementation "com.nimbusds:nimbus-jose-jwt:${nimbusVersion}"
+    implementation "org.bouncycastle:bcprov-jdk15on:${bouncycastleBcprovVersion}"
+    implementation "org.bouncycastle:bcpkix-jdk15on:${bouncycastleBcpkixVersion}"
+    implementation "commons-io:commons-io:${commonsIoVersion}"
+
+    runtimeOnly project(':acs-auth-engine-frontend')
+    annotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    annotationProcessor "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
+
+    testAnnotationProcessor "org.projectlombok:lombok:${lombokVersion}"
+    testImplementation "org.projectlombok:lombok:${lombokVersion}"
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}") {
+        exclude group: 'junit-vintage-engine'
+    }
+}
+
+task copyWebAppToBuildFolder(type: Copy) {
+    //For JAR file
+    println "Copy from ${rootDir}/acs-auth-engine-frontend/www to ${rootDir}/acs-auth-engine-backend/build/resources/main/static/."
+    from "${rootDir}/acs-auth-engine-frontend/www"
+    into "${rootDir}/acs-auth-engine-backend/build/resources/main/static/."
+    exclude '**/*.html'
+}
+
+task copyWebAppToOutFolder(type: Copy) {
+    //For Local BootRun
+    println "Copy from ${rootDir}/acs-auth-engine-frontend/www to ${rootDir}/acs-auth-engine-backend/out/production/resources/static/."
+    from "${rootDir}/acs-auth-engine-frontend/www"
+    into "${rootDir}/acs-auth-engine-backend/out/production/resources/static/."
+    exclude '**/*.html'
+}
+
+processResources.dependsOn(copyWebAppToOutFolder)
+processResources.dependsOn(copyWebAppToBuildFolder)
+compileJava.dependsOn ':acs-auth-engine-frontend:build'

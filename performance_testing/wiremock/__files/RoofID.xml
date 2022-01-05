@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://util.rtcu.cards.bank.lv/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://rid.ays.lv/" name="SimpleInterfaceService" targetNamespace="http://util.rtcu.cards.bank.lv/">
+  <wsdl:import location="http://localhost:8080/jboss-net/services/SimpleInterfaceWS?wsdl=SimpleInterfaceRemote.wsdl" namespace="http://rid.ays.lv/">
+    </wsdl:import>
+  <wsdl:binding name="SimpleInterfaceServiceSoapBinding" type="ns1:SimpleInterfaceRemote">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getRidClientRemote">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="getRidClientRemote">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="getRidClientRemoteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="codetableCheck">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="codetableCheck">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="codetableCheckResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="codetableLoad">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="codetableLoad">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="codetableLoadResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findRidClientParams">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="findRidClientParams">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="findRidClientParamsResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdAuthInit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="smartIdAuthInit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="smartIdAuthInitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPasswd2Remote">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="checkPasswd2Remote">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkPasswd2RemoteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkPasswd1Remote">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="checkPasswd1Remote">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkPasswd1RemoteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdSignCheck">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="smartIdSignCheck">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="smartIdSignCheckResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendCode">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="sendCode">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="sendCodeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="journalWrite">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="journalWrite">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="journalWriteResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdSignInit">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="smartIdSignInit">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="smartIdSignInitResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="checkCode">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="checkCode">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="checkCodeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="smartIdAuthCheck">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="smartIdAuthCheck">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="smartIdAuthCheckResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SimpleInterfaceService">
+    <wsdl:port binding="tns:SimpleInterfaceServiceSoapBinding" name="SimpleInterfaceWSWrapperPort">
+      <soap:address location="http://localhost:8080/jboss-net/services/SimpleInterfaceWS"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

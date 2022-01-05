@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<S:Envelope xmlns:S="http://schemas.xmlsoap.org/soap/envelope/">
+    <S:Body>
+        <ns2:findRidClientParamsResponse xmlns:ns2="http://rid.ays.lv/">
+		<return>
+		  <status>NOT 'a'</status>
+    <clientId>1234</clientId>
+	<smartId>true</smartId>
+	<language>en</language>
+	<lastAuthMethod>S</lastAuthMethod>
+		</return>
+		
+        </ns2:findRidClientParamsResponse>
+    </S:Body>
+</S:Envelope>

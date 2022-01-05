@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html class="is-loading">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        <title><%= htmlWebpackPlugin.options.title %></title>
+        <link rel="shortcut icon" type="image/ico" href="favicon.ico?v=<%= htmlWebpackPlugin.options.REVISION %>" />
+        <style type="text/css">
+            .is-loading,
+            .is-loading body {
+                height: 100%;
+                padding: 0;
+                margin: 0;
+                background-color: #ffffff;
+            }
+
+            .siteloading {
+                background-color: #ffffff;
+                opacity: 0;
+                pointer-events: none;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                z-index: 1000;
+                overflow: hidden;
+                -webkit-transition: opacity 0.25s ease 0s;
+                -moz-transition: opacity 0.25s ease 0s;
+                -o-transition: opacity 0.25s ease 0s;
+                transition: opacity 0.25s ease 0s;
+            }
+            .siteloading svg {
+                width: 100px;
+                height: 100px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                margin: -50px 0 0 -50px;
+            }
+            .is-loading .siteloading {
+                opacity: 1;
+                -webkit-transition: opacity 0.25s ease 0s;
+                -moz-transition: opacity 0.25s ease 0s;
+                -o-transition: opacity 0.25s ease 0s;
+                transition: opacity 0.25s ease 0s;
+            }
+        </style>
+
+        <script th:inline="javascript">
+            window.REACT_APP = {
+                CREQ: 'placeholder for a real creq value from the backend',
+                API_URL: 'http://localhost:8080',
+                DEFAULT_LANGUAGE: 'lt',
+                ACS_TRANSACTION_ID: 'placeholder for a real threeDSSessionData value from the backend',
+                ERROR:  "{\"errorType\":\"FATAL\",\"errorCode\":\"NO_LOGINS_AVAILABLE\",\"errorTranslation\":\"\"}",
+                ERROR_POP_UP_TIMEOUT_IN_MS: 3000,
+                AUTHORIZATION_CODE_FROM_CIAM: 'placeholder for real authorization code',
+            };
+        </script>
+    </head>
+    <body>
+        <div class="siteloading">
+            <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    fill="#481436"
+                    d="M106.2 76.6V506h299.6v-99.9H206.1V76.6h-99.9zM335.2 6l-70.6 70.6 70.6 70.6 70.6-70.6L335.2 6z"
+                />
+            </svg>
+        </div>
+        <div id="root"></div>
+    </body>
+</html>

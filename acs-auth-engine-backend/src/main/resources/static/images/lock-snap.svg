@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="166.2px" height="151px" viewBox="0 0 166.2 151" enable-background="new 0 0 166.2 151" xml:space="preserve">
+<title>lock</title>
+<desc>Created with Sketch.</desc>
+<g id="Luminor-Desktop-MVP">
+	<g id="_x33_d_x5F_2_x5F_login_x5F_error_x5F_animation_x5F_mvp" transform="translate(-671.000000, -266.000000)">
+		<g id="Group-131" transform="translate(216.000000, 108.000000)">
+			<g id="Group-2-Copy-6" transform="translate(284.000000, 136.000000)">
+				<g id="lock" transform="translate(121.000000, 0.000000)">
+					<g id="locked">
+						<rect id="Rectangle-6" x="35.2" fill="none" width="199" height="199"/>
+						
+							<g id="Group-3" transform="translate(96.488334, 98.597877) rotate(-6.000000) translate(-96.488334, -98.597877) translate(44.488334, 21.597877)">
+							<path id="Rectangle" fill="none" stroke="#633754" stroke-width="10.296" d="M87.7,9.6c-9.7-1-18.4,6.1-19.5,15.9l-5.6,53.7
+								c-1,9.8,6,18.6,15.8,19.7l20.3,2.2c9.7,1,18.4-6.1,19.5-15.9l5.6-53.7c1-9.8-6-18.6-15.8-19.7L87.7,9.6z"/>
+							<path id="Rectangle-2" fill="#EBEBE8" d="M62.1,53.8l59.7,6.3c10.3,1.1,17.8,10.3,16.7,20.6l-6.3,59.7
+								c-1.1,10.3-10.3,17.8-20.6,16.7l-59.7-6.3c-10.3-1.1-17.8-10.3-16.7-20.6l6.3-59.7C42.5,60.2,51.8,52.7,62.1,53.8z"/>
+							<path id="Combined-Shape" fill="#3A0E2E" d="M80.4,102.7c-2-1.9-3.3-4.7-3.3-7.7c-0.1-6,4.7-11,10.7-11.1
+								c6-0.1,10.9,4.7,11,10.7c0.1,4.2-2.2,7.9-5.6,9.7l1.5,17.1c0,0.1,0,0.2,0,0.3c-0.1,1.2-1.1,2-2.2,1.9l-15.6-1.2
+								c-0.2,0-0.3,0-0.5-0.1c-1.1-0.3-1.7-1.5-1.4-2.6L80.4,102.7z"/>
+						</g>
+					</g>
+					<path id="Path-9" fill="none" stroke="#EA4A72" stroke-width="4" stroke-linecap="round" d="M180.3,63.5v-20"/>
+					<path id="Path-9-Copy" fill="none" stroke="#EA4A72" stroke-width="4" stroke-linecap="round" d="M189.2,68l14.1-14.1"/>
+					<path id="Path-14" fill="none" stroke="#EA4A72" stroke-width="4" stroke-linecap="round" d="M193.8,77h20"/>
+				</g>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,4 @@
+rootProject.name = 'acs-auth-engine'
+
+include 'acs-auth-engine-backend'
+include 'acs-auth-engine-frontend'

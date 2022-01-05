@@ -1,0 +1,50 @@
+{
+  "acsAuthenticationMethod": "02",
+  "acsTransID": "01c62048-8d26-41cc-8987-7cfafb39480d",
+  "challengeWindowSize": "05",
+  "method": "POST",
+  "deviceChannel": "02",
+  "url": "https://ri1:8446",
+  "content": "creq=eyJhY3NUcmFuc0lEIjoiMDFjNjIwNDgtOGQyNi00MWNjLTg5ODctN2NmYWZiMzk0ODBkIiwiY2hhbGxlbmdlV2luZG93U2l6ZSI6IjA1IiwibWVzc2FnZVR5cGUiOiJDUmVxIiwibWVzc2FnZVZlcnNpb24iOiIyLjEuMCIsInRocmVlRFNTZXJ2ZXJUcmFuc0lEIjoiNGI5ZTc5MDktMmJhMi00YTdkLTk5YWUtMGRjNDk3NGFmZjRiIn0&threeDSSessionData=0aPTs6OZ5V3AfISEV8h8szvWL2U=",
+  "acctNumber": "411790******8063",
+  "dsProtocol": "visa",
+  "dsTransID": "2e7b83af-9a82-45f4-a09d-d1275401a0ad",
+  "messageVersion": "2.1.0",
+  "threeDSServerTransID": "4b9e7909-2ba2-4a7d-99ae-0dc4974aff4b",
+  "authenticationData": {
+    "phone": "+371 27789277",
+    "mobile": [
+      "+371 27789277"
+    ],
+    "lang": "en",
+    "acsPanRange": "reference"
+  },
+  "headers": {
+    "sec-fetch-mode": "navigate",
+    "sec-fetch-site": "same-site",
+    "sec-fetch-dest": "document",
+    "accept-language": "en-GB,en;q=0.9,en-US;q=0.8,lv;q=0.7,pl;q=0.6",
+    "accept-encoding": "gzip, deflate, br",
+    "upgrade-insecure-requests": "1",
+    "content-length": "306",
+    "content-type": "application/x-www-form-urlencoded",
+    "cache-control": "max-age=0",
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36",
+    "referer": "https://ri1:9443/ecomm2/ThreeDs2Handler/Authentication",
+    "cookie": "SERVER3DS_15445_SESSION_ID=BF2E216B9E6A96076A98826B37372310; DS3DS_SESSION_ID=3DC2E56546EADECA7D442457E36B6C98; SERVER3DS_SESSION_ID=F2E3050FEDCBA541EC7B7F41904EF45B; DS3DS_24443_SESSION_ID=44BD5DD9CAF29522CC0A25890EDCD956; ACS3DS_SESSION_ID=A8B35206ED44B83DFA52085C5CA0C8A0",
+    "origin": "https://ri1:9443",
+    "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9",
+    "host": "ri1:8446",
+    "connection": "keep-alive"
+  },
+  "purchaseData": {
+    "purchaseDate": "202006****1821",
+    "purchaseCurrency": "EUR",
+    "merchantName": "Ivo Upe",
+    "purchaseAmount": "104.96"
+  },
+  "acsRenderingType": {
+    "acsUiTemplate": "05",
+    "acsInterface": "02"
+  }
+}

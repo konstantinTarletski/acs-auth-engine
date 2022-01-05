@@ -1,0 +1,26 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/jboss-net/services/SimpleInterfaceWS",
+		  "bodyPatterns": [
+            {
+                "contains": "findRidClientParams"
+            },
+			 {
+                "contains": "card"
+            }
+        ]
+    },
+    "response": {
+        "status": 200,
+        "bodyFileName": "RoffID_1response.xml",
+        "headers": {
+            "Content-Type": "text/xml"
+        },
+        "delayDistribution": {
+            "type": "uniform",
+            "lower": 40,
+            "upper": 60
+        }
+    }
+}

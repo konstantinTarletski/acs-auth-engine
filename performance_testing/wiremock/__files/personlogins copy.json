@@ -1,0 +1,48 @@
+{
+    "error_code": null,
+    "error_message": null,
+    "SessionToken": "SESSION_TOKEN",
+    "PersonList": {
+        "Person": [
+            {
+                "Status": "Active",
+                "FirstName": null,
+                "LastName": null,
+                "PersonCode": null,
+                "Language": "en",
+                "LoginList": {
+                    "Login": [
+                        {
+                            "Status": "Active",
+                            "UserName": "363066",
+                            "LastAuthMethod": null,
+                            "AuthenticationTypeList": {
+                                "AuthenticationType": [
+                                    {
+                                        "authMethod": "SMART_ID",
+                                        "id": 29,
+                                        "Name": null
+                                    }
+                                ]
+                            }
+                        },
+						{
+                            "Status": "Active",
+                            "UserName": "363060",
+                            "LastAuthMethod": null,
+                            "AuthenticationTypeList": {
+                                "AuthenticationType": [
+                                    {
+                                        "authMethod": "CODE_CALCULATOR",
+                                        "id": 7,
+                                        "Name": null
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                }
+            }
+        ]
+    }
+}

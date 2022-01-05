@@ -1,0 +1,23 @@
+defaultTasks 'build'
+
+wrapper {
+    description "Regenerates the Gradle Wrapper files"
+    gradleVersion = '6.5'
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        mavenLocal()
+    }
+}
+
+ext {
+    springBootVersion = '2.4.5'
+    lombokVersion = '1.18.12'
+    h2Version = '1.4.200'
+    nimbusVersion = '9.0.1'
+    bouncycastleBcprovVersion = '1.66'
+    bouncycastleBcpkixVersion = '1.66'
+    commonsIoVersion = '2.8.0'
+}
